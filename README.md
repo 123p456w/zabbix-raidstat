@@ -36,7 +36,8 @@ Vendor name is used as plugin name (like "hp.so").
 
 ## Installation:
 
-1. Copy `raidstat/zabbix/raidstat.sudoers` to `/etc/sudoers.d/raidstat`
-2. Copy `zabbix/userparameter_raidstat.conf` to `/etc/zabbix/zabbix_agentd.d`
-3. Copy compiled binaries to `/opt/raidstat`
-4. Import template`zabbix/zbx_raid_monitoring.xml`
+1. Copy `zabbix/raidstat.sudoers` to `/etc/sudoers.d/raidstat` (change via ansible)
+2. Copy `zabbix/userparameter_raidstat.conf` to `/etc/zabbix/zabbix_agentd.d` (change via ansible)
+3. Run make to compile binaries
+3. Copy compiled binaries to `/opt/zabbix-raidstat`
+4. Import template`zabbix/zbx_raid_monitoring_template.yaml`
